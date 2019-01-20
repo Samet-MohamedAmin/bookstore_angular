@@ -1,0 +1,42 @@
+<div class="search-toolbar docs-primary-header">
+  <form>
+    <mat-form-field class="search-input">
+      <input
+        type="text"
+        placeholder="Best Matches"
+        aria-label="Number"
+        matInput
+        [formControl]="myControl"
+        [matAutocomplete]="auto"
+      />
+      <button
+        mat-button
+        *ngIf="myControl.value"
+        matSuffix
+        mat-icon-button
+        aria-label="Clear"
+        (click)="myControl.setValue('')"
+      >
+        <mat-icon>close</mat-icon>
+      </button>
+      <mat-autocomplete #auto="matAutocomplete">
+        <mat-option
+          *ngFor="let option of (filteredOptions | async)"
+          [value]="option"
+        >
+          {{ option }}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+  </form>
+  <div class="search-choices">
+    <button
+      *ngFor="let option of options"
+      class="search-choice"
+      color="accent"
+      mat-raised-button
+    >
+      {{ option }}
+    </button>
+  </div>
+</div>

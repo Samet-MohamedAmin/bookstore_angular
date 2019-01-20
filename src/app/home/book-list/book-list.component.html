@@ -1,0 +1,13 @@
+<mat-card class="book-list-container">
+  <mat-card-header>
+    <mat-card-title>search result</mat-card-title>
+    <mat-card-subtitle>54 results</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-grid-list class="book-grid-list" cols="4" rowHeight="340">
+      <mat-grid-tile *ngFor="let book of array; let i = index">
+        <app-book-card class="book-card" [value]="book"> </app-book-card>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+@import '@angular/material/prebuilt-themes/pink-bluegrey.css';
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+body {
+    --nav-height: 64px;
+    --container-width: calc(100% - 200px);
+    padding-top: var(--nav-height );
+    padding-bottom: var(--nav-height );
+    height: calc(100% + 40px + 2*var(--nav-height))
+}
+
+.docs-primary-header {
+    background-color: #e91e63;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}

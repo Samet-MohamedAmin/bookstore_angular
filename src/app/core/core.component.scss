@@ -1,0 +1,16 @@
+app-nav-bar, app-footer {
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 10;
+}
+
+app-nav-bar {
+    top: 0
+}
+
+app-footer {
+    bottom: 0;
+    display: none;
+}
+
